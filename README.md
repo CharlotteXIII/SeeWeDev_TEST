@@ -1,3 +1,9 @@
+I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and trying to port Node Editor V3 from **https://github.com/paceholder/nodeeditor.git** and Upgrade UI UX too.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+# **This is a description of SeeWeDev (From NodeEditorV2.XX)**
+
 See-We-Dev  --  Flow-Based Visual Programming for OpenCV. CVDev has been designed and developped as a software tool so that developers can reuse their codes and share their work with others. 
 
 CVDev เป็นโปรแกรมที่ช่วยในการพัฒนาแอพพลิเคชั่นในลักษณะที่เรียกว่า Flow-Based Visual Programming การพัฒนาแอพพลิเคชั่น สามารถทำได้โดยการลากกล่องหรือ Node ต่างๆ และนำมาสร้างเป็นแผนภาพ โดยข้อมูลจะไหลจาก Node หนึ่งไปยังอีก Node หนึ่งตามเส้นทางที่ผู้ใช้งานลากเส้นทางเชื่อมโยง Node แต่ละ Node ไว้ โดยในแต่ละ Node จะทำการประมวลผลข้อมูลที่ได้รับและส่งผลการประมวลต่อไปให้กับ Node ในลำดับถัดไป จนในที่สุดได้ผลลัพธ์ของงานที่ต้องการ โดยที่ไม่จำเป็นต้องคอมไพล์โปรแกรมใหม่
