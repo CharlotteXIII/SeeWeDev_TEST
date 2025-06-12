@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Plugins/DNNNodes/DNNNodes_autogen",
+	"CMAKE_BINARY_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Plugins/DNNNodes",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes",
+	"CMAKE_SOURCE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST",
+	"INCLUDE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Plugins/DNNNodes/DNNNodes_autogen/include",
+	"INPUTS" : [],
+	"LOCK_FILE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Plugins/DNNNodes/CMakeFiles/DNNNodes_autogen.dir/AutoRcc_dnn_resources_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "dnn_resources" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_dnn_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Plugins/DNNNodes/CMakeFiles/DNNNodes_autogen.dir/AutoRcc_dnn_resources_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/dnn_resources.qrc",
+	"VERBOSITY" : 0
+}

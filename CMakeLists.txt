@@ -18,6 +18,7 @@ endif()
 add_subdirectory(NodeEditor)
 add_subdirectory(QtPropertyBrowserLibrary)
 add_subdirectory(CVDevLibrary)
+add_subdirectory(external/nodeeditor_v3)
 
 add_subdirectory(CVDev)
 
