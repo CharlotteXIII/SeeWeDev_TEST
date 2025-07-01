@@ -19,15 +19,17 @@
 
 #include "CVDevLibrary.hpp"
 
-#include <FlowScene>
+// #include <FlowScene>
 #include <QMainWindow>
 #include <QTreeWidgetItem>
-#include <QPluginLoader>
-#include "PBNodeDataModel.hpp"
-#include "PBFlowScene.hpp"
-#include "PBFlowView.hpp"
-#include "qtpropertymanager.h"
+// #include <QPluginLoader>
+// #include "PBNodeDataModel.hpp"
+// #include "PBFlowScene.hpp"
+// #include "PBFlowView.hpp"
+// #include "qtpropertymanager.h"
 #include <QMap>
+
+#include "node_editor_v3_integration/NewNodeEditorWidget.h"  //NewAdd
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

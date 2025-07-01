@@ -34,11 +34,25 @@ add_library(${PROJECT_NAME} SHARED
     MainWindow.ui
 
     resources/resources.qrc
+    node_editor_v3_integration/NewNodeEditorWidget.cpp                      #+add
+    node_editor_v3_integration/example_models/NumberSourceDataModel.cpp     #+add
+    node_editor_v3_integration/example_models/NumberDisplayDataModel.cpp    #+add
+
+    node_editor_v3_integration/example_models/AdditionModel.hpp             #+add
+    node_editor_v3_integration/NewNodeEditorWidget.h                        #+add
+    node_editor_v3_integration/example_models/NumberSourceDataModel.hpp     #+add
+    node_editor_v3_integration/example_models/NumberDisplayDataModel.hpp    #+add
+
 )
 
 add_definitions(-DQT_DEPRECATED_WARNINGS -DNODE_EDITOR_SHARED -DCVDEV_LIBRARY)
 
-include_directories(${NodeEditor_INCLUDE_DIRS} ${QtPropertyBrowserLibrary_INCLUDE_DIRS})
+include_directories(
+    ${NodeEditor_INCLUDE_DIRS}
+    ${QtPropertyBrowserLibrary_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/node_editor_v3_integration                 #+add
+    ${CMAKE_CURRENT_SOURCE_DIR}/node_editor_v3_integration/example_models  #+add
+)
 
 # Required on Unix OS family to be able to be linked into shared libraries.
 set_target_properties(${PROJECT_NAME}
@@ -46,12 +60,20 @@ set_target_properties(${PROJECT_NAME}
                       RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/CVDev/)
 
 target_link_libraries(${PROJECT_NAME}
-    NodeEditor
+    # NodeEditor    #Cancel V2
+    QtNodes         #+add new 'target' which created by CMakeLists.txt inside external/nodeeditor_v3
+                    #Check target name by go to external/nodeeditor_v3/CMakeLists.txt
+                    #Find add_library(QtNodes
+                    #${CPP_SOURCE_FILES}
+                    #${HPP_HEADER_FILES}
+                    #${RESOURCES})
+                    # So target name is QtNodes
     QtPropertyBrowserLibrary
     ${OpenCV_LIBS}
     )
 
-set(${PROJECT_NAME}_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}
+set(${PROJECT_NAME}_INCLUDE_DIRS
+    ${PROJECT_SOURCE_DIR}
     ${NodeEditor_INCLUDE_DIRS}
     ${QtPropertyBrowserLibrary_INCLUDE_DIRS}
     CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)
