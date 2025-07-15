@@ -1,0 +1,27 @@
+{
+	"BUILD_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/NodeEditor/NodeEditor_autogen",
+	"CMAKE_BINARY_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/NodeEditor",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/NodeEditor",
+	"CMAKE_SOURCE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/NodeEditor/NodeEditor_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/NodeEditor/resources/convert.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/NodeEditor/resources/DefaultStyle.json",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/NodeEditor/resources/NodeEditor.png"
+	],
+	"LOCK_FILE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/NodeEditor/CMakeFiles/NodeEditor_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/home/charlottexiii/Qt/6.9.1/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/NodeEditor/CMakeFiles/NodeEditor_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/NodeEditor/resources/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

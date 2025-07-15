@@ -21,6 +21,8 @@
 #include <QtCore/QThread>
 #include <QtCore/QSemaphore>
 #include <QtCore/QMutex>
+#include <QtWidgets/QLabel>
+
 
 #include <nodes/DataModelRegistry>
 #include "PBNodeDataModel.hpp"
@@ -121,6 +123,9 @@ public:
     QWidget *
     embeddedWidget() override { return nullptr; }
 
+    QPixmap
+    minPixmap() const override { return _minPixmap; }
+
     void
     setModelProperty( QString &, const QVariant & ) override;
 
@@ -139,6 +144,7 @@ private:
     std::shared_ptr< CVImageData > mpCVImageData { nullptr };
     std::shared_ptr< SyncData > mpSyncData;
     std::shared_ptr< InformationData > mpInformationData{ nullptr };
+    QPixmap _minPixmap;
 
     NomadMLClassificationThread * mpNomadMLClassificationThread { nullptr };
 

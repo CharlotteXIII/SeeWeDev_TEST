@@ -125,7 +125,8 @@ setParams(OnnxClassificationDNNBlobImageParameters & params)
 
 OnnxClassificationDNNModel::
 OnnxClassificationDNNModel()
-    : PBNodeDataModel( _model_name )
+    : PBNodeDataModel( _model_name ),
+        _minPixmap( ":Onnx.png" )
 {
     mpCVImageData = std::make_shared< CVImageData >( cv::Mat() );
     mpSyncData = std::make_shared< SyncData >( true );

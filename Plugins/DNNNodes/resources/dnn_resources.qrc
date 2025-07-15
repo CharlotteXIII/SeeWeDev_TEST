@@ -1,5 +1,11 @@
 <RCC>
     <qresource prefix="/">
-
+    	<file>necml-logo.png</file>
+    	<file>NomadML.png</file>
+    	<file>text--detector.png</file>
+    	<file>object-detector.png</file>
+        <file>face-detection.png</file>
+        <file>Onnx.png</file>
+        <file>Text-Recog.png</file>
     </qresource>
 </RCC>

@@ -1,0 +1,38 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"CVDevLibrary/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "NodeEditor::@e2225f166bed140f8983"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "QtPropertyBrowserLibrary::@1e4dade56c9df2796639"
+		}
+	],
+	"id" : "CVDevLibrary_autogen_timestamp_deps::@ba1b204171845adc6f15",
+	"isGeneratorProvided" : true,
+	"name" : "CVDevLibrary_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "CVDevLibrary",
+		"source" : "CVDevLibrary"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

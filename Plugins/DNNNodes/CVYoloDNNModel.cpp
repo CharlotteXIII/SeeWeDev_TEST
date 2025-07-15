@@ -225,7 +225,8 @@ setParams(CVYoloDNNImageParameters & params)
 
 CVYoloDNNModel::
 CVYoloDNNModel()
-    : PBNodeDataModel( _model_name )
+    : PBNodeDataModel( _model_name ),
+        _minPixmap( ":object-detector.png" )
 {
     mpCVImageData = std::make_shared< CVImageData >( cv::Mat() );
     mpSyncData = std::make_shared< SyncData >();

@@ -121,7 +121,8 @@ NecMLClassificationThread::
 
 NecMLClassificationModel::
 NecMLClassificationModel()
-    : PBNodeDataModel( _model_name )
+    : PBNodeDataModel( _model_name ),
+        _minPixmap( ":necml-logo.png" )
 {
     mpCVImageData = std::make_shared< CVImageData >( cv::Mat() );
     mpSyncData = std::make_shared< SyncData >( true );

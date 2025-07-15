@@ -1,0 +1,31 @@
+{
+	"BUILD_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/Plugins/DNNNodes/DNNNodes_autogen",
+	"CMAKE_BINARY_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/Plugins/DNNNodes",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes",
+	"CMAKE_SOURCE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/Plugins/DNNNodes/DNNNodes_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/necml-logo.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/face-detection.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/Text-Recog.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/NomadML.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/object-detector.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/Onnx.png",
+		"/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/text--detector.png"
+	],
+	"LOCK_FILE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/Plugins/DNNNodes/CMakeFiles/DNNNodes_autogen.dir/AutoRcc_dnn_resources_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "dnn_resources" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_dnn_resources.cpp",
+	"RCC_EXECUTABLE" : "/home/charlottexiii/Qt/6.9.1/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/Plugins/DNNNodes/CMakeFiles/DNNNodes_autogen.dir/AutoRcc_dnn_resources_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes/resources/dnn_resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

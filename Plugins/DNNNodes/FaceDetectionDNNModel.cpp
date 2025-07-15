@@ -107,7 +107,8 @@ readNet( QString & model, QString & config )
 
 FaceDetectionDNNModel::
 FaceDetectionDNNModel()
-    : PBNodeDataModel( _model_name )
+    : PBNodeDataModel( _model_name ),
+        _minPixmap( ":face-detection.png" )
 {
     mpCVImageData = std::make_shared< CVImageData >( cv::Mat() );
     mpSyncData = std::make_shared< SyncData >();

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(CVDev)
 
@@ -15,11 +15,12 @@ if( WIN32 )
     set(CMAKE_SHARED_LIBRARY_PREFIX "")
 endif()
 
-add_subdirectory(NodeEditor)
+# add_subdirectory(NodeEditor)
 add_subdirectory(QtPropertyBrowserLibrary)
 add_subdirectory(CVDevLibrary)
-add_subdirectory(external/nodeeditor_v3)
 
 add_subdirectory(CVDev)
 
 add_subdirectory(Plugins)
+
+add_subdirectory(nodeeditor_v3) #add

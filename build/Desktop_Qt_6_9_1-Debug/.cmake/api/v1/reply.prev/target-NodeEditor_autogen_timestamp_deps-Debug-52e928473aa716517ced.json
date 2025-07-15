@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"NodeEditor/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "NodeEditor_autogen_timestamp_deps::@e2225f166bed140f8983",
+	"isGeneratorProvided" : true,
+	"name" : "NodeEditor_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "NodeEditor",
+		"source" : "NodeEditor"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

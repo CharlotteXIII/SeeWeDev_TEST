@@ -1,0 +1,34 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"Plugins/DNNNodes/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "CVDevLibrary::@ba1b204171845adc6f15"
+		}
+	],
+	"id" : "DNNNodes_autogen_timestamp_deps::@a19ac291a273a0d05e40",
+	"isGeneratorProvided" : true,
+	"name" : "DNNNodes_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "Plugins/DNNNodes",
+		"source" : "Plugins/DNNNodes"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -8,7 +8,7 @@
 
 namespace QtNodes {
 
-/// Class to allow for custom painting
+// Class to allow for custom painting
 class NODE_EDITOR_PUBLIC NodePainterDelegate
 {
 
@@ -23,3 +23,5 @@ public:
         NodeDataModel const * model) = 0;
 };
 }
+
+
