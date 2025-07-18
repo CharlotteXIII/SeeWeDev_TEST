@@ -18,8 +18,8 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "Debug")
   "QtPropertyBrowserLibrary/CMakeFiles/QtPropertyBrowserLibrary_autogen.dir/AutogenUsed.txt"
   "QtPropertyBrowserLibrary/CMakeFiles/QtPropertyBrowserLibrary_autogen.dir/ParseCache.txt"
   "QtPropertyBrowserLibrary/QtPropertyBrowserLibrary_autogen"
-  "nodeeditor_v3/CMakeFiles/QtNodes_autogen.dir/AutogenUsed.txt"
-  "nodeeditor_v3/CMakeFiles/QtNodes_autogen.dir/ParseCache.txt"
-  "nodeeditor_v3/QtNodes_autogen"
+  "nodeeditor_v3/CMakeFiles/NodeEditor_autogen.dir/AutogenUsed.txt"
+  "nodeeditor_v3/CMakeFiles/NodeEditor_autogen.dir/ParseCache.txt"
+  "nodeeditor_v3/NodeEditor_autogen"
   )
 endif()

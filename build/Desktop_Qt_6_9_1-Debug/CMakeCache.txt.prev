@@ -339,16 +339,16 @@ DNNNodes_LIB_DEPENDS:STATIC=general;CVDevLibrary;general;opencv_calib3d;general;
 DNNNodes_SOURCE_DIR:STATIC=/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/Plugins/DNNNodes
 
 //Value Computed by CMake
-NodeEditor_BINARY_DIR:STATIC=/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/NodeEditor
+NodeEditor_BINARY_DIR:STATIC=/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/nodeeditor_v3
 
 //Value Computed by CMake
 NodeEditor_IS_TOP_LEVEL:STATIC=OFF
 
 //Dependencies for the target
-NodeEditor_LIB_DEPENDS:STATIC=general;Qt6::Widgets;general;Qt6::OpenGL;
+NodeEditor_LIB_DEPENDS:STATIC=general;Qt6::Core;general;Qt6::Widgets;general;Qt6::Gui;general;Qt6::OpenGL;
 
 //Value Computed by CMake
-NodeEditor_SOURCE_DIR:STATIC=/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/NodeEditor
+NodeEditor_SOURCE_DIR:STATIC=/home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/nodeeditor_v3
 
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
@@ -669,7 +669,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

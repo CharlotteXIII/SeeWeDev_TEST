@@ -8,5 +8,5 @@ set(__QT_DEPLOY_TARGET_BasicNodes_FILE /home/charlottexiii/SeeWeDev_NodeV3/SeeWe
 set(__QT_DEPLOY_TARGET_BasicNodes_TYPE SHARED_LIBRARY)
 set(__QT_DEPLOY_TARGET_DNNNodes_FILE /home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/Plugins/DNNNodes/libDNNNodes.so)
 set(__QT_DEPLOY_TARGET_DNNNodes_TYPE SHARED_LIBRARY)
-set(__QT_DEPLOY_TARGET_QtNodes_FILE /home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/lib/libQtNodes.so)
-set(__QT_DEPLOY_TARGET_QtNodes_TYPE SHARED_LIBRARY)
+set(__QT_DEPLOY_TARGET_NodeEditor_FILE /home/charlottexiii/SeeWeDev_NodeV3/SeeWeDev_TEST/build/Desktop_Qt_6_9_1-Debug/lib/libNodeEditor.so)
+set(__QT_DEPLOY_TARGET_NodeEditor_TYPE SHARED_LIBRARY)

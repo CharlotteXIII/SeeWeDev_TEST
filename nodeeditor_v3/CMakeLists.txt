@@ -4,7 +4,7 @@ cmake_policy(SET CMP0072 NEW) # new in 3.11. The NEW behavior for this policy is
 cmake_policy(SET CMP0068 NEW) # new in 3.9. The NEW behavior of this policy is to ignore the RPATH settings for install_name on macOS.
 
 
-project(QtNodesLibrary CXX)
+project(NodeEditor LANGUAGES CXX) # <<changed>>
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
@@ -98,65 +98,66 @@ set(CPP_SOURCE_FILES
 )
 
 set(HPP_HEADER_FILES
-  include/QtNodes/internal/AbstractConnectionPainter.hpp
-  include/QtNodes/internal/AbstractGraphModel.hpp
-  include/QtNodes/internal/AbstractNodeGeometry.hpp
-  include/QtNodes/internal/AbstractNodePainter.hpp
-  include/QtNodes/internal/BasicGraphicsScene.hpp
-  include/QtNodes/internal/Compiler.hpp
-  include/QtNodes/internal/ConnectionGraphicsObject.hpp
-  include/QtNodes/internal/ConnectionIdHash.hpp
-  include/QtNodes/internal/ConnectionIdUtils.hpp
-  include/QtNodes/internal/ConnectionState.hpp
-  include/QtNodes/internal/ConnectionStyle.hpp
-  include/QtNodes/internal/DataFlowGraphicsScene.hpp
-  include/QtNodes/internal/DataFlowGraphModel.hpp
-  include/QtNodes/internal/Definitions.hpp
-  include/QtNodes/internal/Export.hpp
-  include/QtNodes/internal/GraphicsView.hpp
-  include/QtNodes/internal/GraphicsViewStyle.hpp
-  include/QtNodes/internal/locateNode.hpp
-  include/QtNodes/internal/NodeData.hpp
-  include/QtNodes/internal/NodeDelegateModel.hpp
-  include/QtNodes/internal/NodeDelegateModelRegistry.hpp
-  include/QtNodes/internal/NodeGraphicsObject.hpp
-  include/QtNodes/internal/NodeState.hpp
-  include/QtNodes/internal/NodeStyle.hpp
-  include/QtNodes/internal/OperatingSystem.hpp
-  include/QtNodes/internal/QStringStdHash.hpp
-  include/QtNodes/internal/QUuidStdHash.hpp
-  include/QtNodes/internal/Serializable.hpp
-  include/QtNodes/internal/Style.hpp
-  include/QtNodes/internal/StyleCollection.hpp
-  include/QtNodes/internal/DefaultConnectionPainter.hpp
-  include/QtNodes/internal/DefaultHorizontalNodeGeometry.hpp
-  include/QtNodes/internal/DefaultNodePainter.hpp
-  include/QtNodes/internal/DefaultVerticalNodeGeometry.hpp
-  include/QtNodes/internal/NodeConnectionInteraction.hpp
-  include/QtNodes/internal/UndoCommands.hpp
+  include/nodes/internal/AbstractConnectionPainter.hpp
+  include/nodes/internal/AbstractGraphModel.hpp
+  include/nodes/internal/AbstractNodeGeometry.hpp
+  include/nodes/internal/AbstractNodePainter.hpp
+  include/nodes/internal/BasicGraphicsScene.hpp
+  include/nodes/internal/Compiler.hpp
+  include/nodes/internal/ConnectionGraphicsObject.hpp
+  include/nodes/internal/ConnectionIdHash.hpp
+  include/nodes/internal/ConnectionIdUtils.hpp
+  include/nodes/internal/ConnectionState.hpp
+  include/nodes/internal/ConnectionStyle.hpp
+  include/nodes/internal/DataFlowGraphicsScene.hpp
+  include/nodes/internal/DataFlowGraphModel.hpp
+  include/nodes/internal/Definitions.hpp
+  include/nodes/internal/Export.hpp
+  include/nodes/internal/GraphicsView.hpp
+  include/nodes/internal/GraphicsViewStyle.hpp
+  include/nodes/internal/locateNode.hpp
+  include/nodes/internal/NodeData.hpp
+  include/nodes/internal/NodeDelegateModel.hpp
+  include/nodes/internal/NodeDelegateModelRegistry.hpp
+  include/nodes/internal/NodeGraphicsObject.hpp
+  include/nodes/internal/NodeState.hpp
+  include/nodes/internal/NodeStyle.hpp
+  include/nodes/internal/OperatingSystem.hpp
+  include/nodes/internal/QStringStdHash.hpp
+  include/nodes/internal/QUuidStdHash.hpp
+  include/nodes/internal/Serializable.hpp
+  include/nodes/internal/Style.hpp
+  include/nodes/internal/StyleCollection.hpp
+  include/nodes/internal/DefaultConnectionPainter.hpp
+  include/nodes/internal/DefaultHorizontalNodeGeometry.hpp
+  include/nodes/internal/DefaultNodePainter.hpp
+  include/nodes/internal/DefaultVerticalNodeGeometry.hpp
+  include/nodes/internal/NodeConnectionInteraction.hpp
+  include/nodes/internal/UndoCommands.hpp
 )
 
 # If we want to give the option to build a static library,
 # set BUILD_SHARED_LIBS option to OFF
-add_library(QtNodes
+
+add_library(${PROJECT_NAME} SHARED     # <<changed>>
   ${CPP_SOURCE_FILES}
   ${HPP_HEADER_FILES}
   ${RESOURCES}
 )
 
-add_library(QtNodes::QtNodes ALIAS QtNodes)
+# add_library(QtNodes::QtNodes ALIAS QtNodes) # <<changed to comment>>
 
 
-target_include_directories(QtNodes
+target_include_directories(NodeEditor  # <<changed QtNodes -> ์NodeEditor>>
   PUBLIC
     $<INSTALL_INTERFACE:include>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   PRIVATE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/QtNodes/internal>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/nodes/internal> <<changed QtNodes -> node>> path
 )
 
-target_link_libraries(QtNodes
+target_link_libraries(NodeEditor       # <<changed QtNodes -> NodeEditor>>
   PUBLIC
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Widgets
@@ -164,7 +165,7 @@ target_link_libraries(QtNodes
     Qt${QT_VERSION_MAJOR}::OpenGL
 )
 
-target_compile_definitions(QtNodes
+target_compile_definitions(NodeEditor  # <<changed QtNodes -> NodeEditor>>
   PUBLIC
     $<IF:$<BOOL:${BUILD_SHARED_LIBS}>, NODE_EDITOR_SHARED, NODE_EDITOR_STATIC>
   PRIVATE
@@ -174,7 +175,7 @@ target_compile_definitions(QtNodes
 )
 
 
-target_compile_options(QtNodes
+target_compile_options(NodeEditor    # <<changed QtNodes -> NodeEditor>>
   PRIVATE
     $<$<CXX_COMPILER_ID:MSVC>:/W4 /wd4127 /EHsc /utf-8>
     $<$<CXX_COMPILER_ID:GNU>:-Wall -Wextra>
@@ -182,19 +183,19 @@ target_compile_options(QtNodes
 )
 if(NOT "${CMAKE_CXX_SIMULATE_ID}" STREQUAL "MSVC")
   # Clang-Cl on MSVC identifies as "Clang" but behaves more like MSVC:
-  target_compile_options(QtNodes
+  target_compile_options(NodeEditor  # <<changed QtNodes -> NodeEditor>>
     PRIVATE
       $<$<CXX_COMPILER_ID:Clang>:-Wall -Wextra>
   )
 endif()
 
 if(QT_NODES_DEVELOPER_DEFAULTS)
-  target_compile_features(QtNodes PUBLIC cxx_std_14)
-  set_target_properties(QtNodes PROPERTIES CXX_EXTENSIONS OFF)
+  target_compile_features(NodeEditor PUBLIC cxx_std_14)              # <<changed QtNodes -> NodeEditor>>
+  set_target_properties(NodeEditor PROPERTIES CXX_EXTENSIONS OFF)    # <<changed QtNodes -> NodeEditor>>
 endif()
 
 
-set_target_properties(QtNodes
+set_target_properties(NodeEditor     # <<changed QtNodes -> NodeEditor>>
   PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
@@ -205,77 +206,77 @@ set_target_properties(QtNodes
 # Moc
 ##
 
-file(GLOB_RECURSE HEADERS_TO_MOC include/QtNodes/internal/*.hpp)
+file(GLOB_RECURSE HEADERS_TO_MOC include/nodes/internal/*.hpp)    # <<changed QtNodes -> nodes>>
 
 if (${QT_VERSION_MAJOR} EQUAL 6)
   qt_wrap_cpp(nodes_moc
       ${HEADERS_TO_MOC}
-      TARGET QtNodes
+      TARGET NodeEditor            # <<changed QtNodes -> NodeEditor>>
     OPTIONS --no-notes # Don't display a note for the headers which don't produce a moc_*.cpp
   )
 else()
   qt5_wrap_cpp(nodes_moc
   ${HEADERS_TO_MOC}
-  TARGET QtNodes
+  TARGET NodeEditor                # <<changed QtNodes -> NodeEditor>>
   OPTIONS --no-notes # Don't display a note for the headers which don't produce a moc_*.cpp
   )
 endif()
 
-target_sources(QtNodes PRIVATE ${nodes_moc})
+target_sources(NodeEditor PRIVATE ${nodes_moc})    # <<changed QtNodes -> NodeEditor>>
 
 ###########
 # Examples
 ##
 
-if(BUILD_EXAMPLES)
-  add_subdirectory(examples)
-endif()
+# if(BUILD_EXAMPLES)
+#   add_subdirectory(examples)
+# endif()
 
-if(BUILD_DOCS)
-  add_subdirectory(docs)
-endif()
+# if(BUILD_DOCS)
+#   add_subdirectory(docs)
+# endif()
 
 ##################
 # Automated Tests
 ##
 
-if(BUILD_TESTING)
-  #add_subdirectory(test)
-endif()
+# if(BUILD_TESTING)
+#   #add_subdirectory(test)
+# endif()
 
 ###############
 # Installation
 ##
 
-include(GNUInstallDirs)
+# include(GNUInstallDirs)
 
-set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/QtNodes)
+# set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/QtNodes)
 
-install(TARGETS QtNodes
-  EXPORT QtNodesTargets
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
+# install(TARGETS nodes       # <<changed QtNodes -> nodes>>
+#   EXPORT QtNodesTargets     # <<changed QtNodes -> nodes>>
+#   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+#   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+# )
 
-install(DIRECTORY include/
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+# install(DIRECTORY include/
+#         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
-install(EXPORT QtNodesTargets
-  FILE QtNodesTargets.cmake
-  NAMESPACE QtNodes::
-  DESTINATION ${INSTALL_CONFIGDIR}
-)
+# install(EXPORT nodesTargets     # <<changed QtNodes -> nodes>>
+#   FILE nodesTargets.cmake       # <<changed QtNodes -> nodes>>
+#   NAMESPACE nodes::             # <<changed QtNodes -> nodes>>
+#   DESTINATION ${INSTALL_CONFIGDIR}
+# )
 
-include(CMakePackageConfigHelpers)
+# include(CMakePackageConfigHelpers)
 
-configure_package_config_file(${CMAKE_CURRENT_LIST_DIR}/cmake/QtNodesConfig.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/QtNodesConfig.cmake
-  INSTALL_DESTINATION ${INSTALL_CONFIGDIR}
-)
+# configure_package_config_file(${CMAKE_CURRENT_LIST_DIR}/cmake/QtNodesConfig.cmake.in
+#   ${CMAKE_CURRENT_BINARY_DIR}/nodesConfig.cmake     # <<changed QtNodes -> nodes>>
+#   INSTALL_DESTINATION ${INSTALL_CONFIGDIR}
+# )
 
-install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/QtNodesConfig.cmake
-  DESTINATION ${INSTALL_CONFIGDIR}
-)
+# install(FILES
+#   ${CMAKE_CURRENT_BINARY_DIR}/nodesConfig.cmake     # <<changed QtNodes -> nodes>>
+#   DESTINATION ${INSTALL_CONFIGDIR}
+# )

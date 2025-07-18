@@ -1,5 +1,6 @@
-I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and trying to port Node Editor V3 from **https://github.com/paceholder/nodeeditor.git** and Upgrade UI UX too.
+I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and trying to port Node Editor **V3** from **https://github.com/paceholder/nodeeditor.git** and Upgrade UI UX too.
 
+**This NodeEditor v3, It has been renamed to "NodeEditor" and structured to be compatible with CVDev.**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 # **This is a description of SeeWeDev (From NodeEditorV2.XX)**
