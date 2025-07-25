@@ -20,9 +20,13 @@
 #include "CVDevLibrary.hpp"
 
 #include "nodes/internal/Export.hpp"
-#include <nodes/FlowView>
-#include <nodes/Node>
+// #include "nodes/internal/GraphicsView.hpp"  //add
+
 #include <QDragMoveEvent>
+
+//Not USE 
+#include <nodes/FlowView>   
+#include <nodes/Node> 
 
 using QtNodes::Node;
 

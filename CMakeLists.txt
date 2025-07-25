@@ -15,7 +15,7 @@ if( WIN32 )
     set(CMAKE_SHARED_LIBRARY_PREFIX "")
 endif()
 
-# add_subdirectory(NodeEditor) #ver2 old
+# NO_add_subdirectory(NodeEditor) #ver2 old
 add_subdirectory(QtPropertyBrowserLibrary)
 add_subdirectory(CVDevLibrary)
 

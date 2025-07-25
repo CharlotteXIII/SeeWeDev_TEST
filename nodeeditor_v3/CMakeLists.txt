@@ -209,74 +209,19 @@ set_target_properties(NodeEditor     # <<changed QtNodes -> NodeEditor>>
 file(GLOB_RECURSE HEADERS_TO_MOC include/nodes/internal/*.hpp)    # <<changed QtNodes -> nodes>>
 
 if (${QT_VERSION_MAJOR} EQUAL 6)
-  qt_wrap_cpp(nodes_moc
+  qt_wrap_cpp(nodeeditorv3_moc
       ${HEADERS_TO_MOC}
       TARGET NodeEditor            # <<changed QtNodes -> NodeEditor>>
     OPTIONS --no-notes # Don't display a note for the headers which don't produce a moc_*.cpp
   )
 else()
-  qt5_wrap_cpp(nodes_moc
+  qt5_wrap_cpp(nodeeditorv3_moc
   ${HEADERS_TO_MOC}
   TARGET NodeEditor                # <<changed QtNodes -> NodeEditor>>
   OPTIONS --no-notes # Don't display a note for the headers which don't produce a moc_*.cpp
   )
 endif()
 
-target_sources(NodeEditor PRIVATE ${nodes_moc})    # <<changed QtNodes -> NodeEditor>>
+target_sources(NodeEditor PRIVATE ${nodeeditorv3_moc})    # <<changed QtNodes -> NodeEditor>>
 
-###########
-# Examples
-##
-
-# if(BUILD_EXAMPLES)
-#   add_subdirectory(examples)
-# endif()
-
-# if(BUILD_DOCS)
-#   add_subdirectory(docs)
-# endif()
-
-##################
-# Automated Tests
-##
-
-# if(BUILD_TESTING)
-#   #add_subdirectory(test)
-# endif()
-
-###############
-# Installation
-##
-
-# include(GNUInstallDirs)
-
-# set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/QtNodes)
-
-# install(TARGETS nodes       # <<changed QtNodes -> nodes>>
-#   EXPORT QtNodesTargets     # <<changed QtNodes -> nodes>>
-#   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-#   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-#   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-#   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-# )
-
-# install(DIRECTORY include/
-#         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-
-# install(EXPORT nodesTargets     # <<changed QtNodes -> nodes>>
-#   FILE nodesTargets.cmake       # <<changed QtNodes -> nodes>>
-#   NAMESPACE nodes::             # <<changed QtNodes -> nodes>>
-#   DESTINATION ${INSTALL_CONFIGDIR}
-# )
-
-# include(CMakePackageConfigHelpers)
-
-# configure_package_config_file(${CMAKE_CURRENT_LIST_DIR}/cmake/QtNodesConfig.cmake.in
-#   ${CMAKE_CURRENT_BINARY_DIR}/nodesConfig.cmake     # <<changed QtNodes -> nodes>>
-#   INSTALL_DESTINATION ${INSTALL_CONFIGDIR}
-# )
-
-# install(FILES
-#   ${CMAKE_CURRENT_BINARY_DIR}/nodesConfig.cmake     # <<changed QtNodes -> nodes>>
-#   DESTINATION ${INSTALL_CONFIGDIR}
-# )
+# Deleted Installation, Automated Tests and Example
