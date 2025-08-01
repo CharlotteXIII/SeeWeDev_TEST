@@ -21,6 +21,6 @@ add_subdirectory(CVDevLibrary)
 
 add_subdirectory(CVDev)
 
-add_subdirectory(Plugins)
+# add_subdirectory(Plugins) #Temporary_Close
 
 add_subdirectory(nodeeditor_v3) #add New v3

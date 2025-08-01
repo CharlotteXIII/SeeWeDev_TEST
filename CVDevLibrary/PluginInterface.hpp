@@ -19,7 +19,8 @@
 
 #include <QtPlugin>
 #include <QPluginLoader>
-#include <DataModelRegistry>
+// #include <DataModelRegistry>
+#include "nodes/internal/NodeDelegateModelRegistry.hpp"  //add
 #include "CVDevLibrary.hpp"
 
 using QtNodes::DataModelRegistry;

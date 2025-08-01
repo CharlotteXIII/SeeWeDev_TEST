@@ -16,7 +16,7 @@
 #include "PBNodeDataModel.hpp"
 #include <QFile>
 #include <QFileInfo>
-#include <nodes/Node>
+#include <nodes/Node> //MustFix 
 
 using QtNodes::PortType;
 

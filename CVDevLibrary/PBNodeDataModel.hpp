@@ -19,7 +19,8 @@
 
 #include "CVDevLibrary.hpp"
 #include "Property.hpp"
-#include "NodeDataModel"
+// #include "NodeDataModel"
+#include "nodes/internal/NodeDelegateModel.hpp"  //add
 
 using QtNodes::PortIndex;
 using QtNodes::NodeData;

@@ -17,7 +17,8 @@
 
 #pragma once
 
-#include <nodes/NodeDataModel>
+// #include <nodes/NodeDataModel>
+#include "nodes/internal/NodeDelegateModel.hpp"  //add
 #include "InformationData.hpp"
 
 using QtNodes::NodeData;

@@ -5,7 +5,8 @@
 
 #include <opencv2/core.hpp>
 
-#include <nodes/NodeDataModel>
+// #include <nodes/NodeDataModel>
+#include "nodes/internal/NodeDelegateModel.hpp"  //add
 #include "InformationData.hpp"
 
 using QtNodes::NodeData;
