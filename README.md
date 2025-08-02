@@ -22,6 +22,7 @@ I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and
 
 # **Table of Contents**
 - [CompileCVDev](#CompileCVDev)
+- [สิ่งที่เปลี่ยนของNodeEditor](#สิ่งที่เปลี่ยนของNodeEditor)
 - [สิ่งที่ได้ทำลงไปบ้าง](#สิ่งที่ได้ทำลงไปบ้าง)
   
 # CompileCVDev
@@ -41,7 +42,7 @@ I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and
 
 ### **ก่อนจะ Compile เราจะมาแก้บางอย่างในไฟล์หน่อยนึงก่อน 2 อย่าง**
 
-**1.แก้ไฟล์ PBImageDisplayWidget.hpp**
+## **1.แก้ไฟล์ PBImageDisplayWidget.hpp**
 
 - เข้าไปใน folder SeeWeDev ผ่าน files เปิดหา SeeWeDev/Plugins/BasicNodes
 - เข้าไป comment //
@@ -57,12 +58,15 @@ I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and
 ```#if (QT_VERSION < QT_VERSION_CHECK(6,7,0))```
 <br /><br />
 
-**2. Install Qt6 (หากเกิดปัญหา Error ) แบบว่าเราไม่มี qt อยู่ในเครื่องเลย ถ้าไม่มีปัญหาก็ไม่ต้องโหลด**
+## **2. Install Qt6 (หากเกิดปัญหา Error ) หากเราไม่มี qt อยู่ในเครื่องเลย ถ้าไม่มีปัญหาก็ไม่ต้องโหลด**
 
 ถ้าจะโหลดก็ ```sudo apt install qt6-base-dev qt6-base-dev-tools``` 
 
-<br />
-จากนั้นจะมี folder ชื่อ SeeWeDev ขึ้นมา ให้พิมพ์คำสั่งต่อใน terminal เพื่อเข้าไปใน folder นั้น
+<br /><br />
+
+**หลังจากทำข้อ 1 - 2 เสร็จแล้ว**
+
+จากนั้นจะมี folder ชื่อ SeeWeDev ขึ้นมาหลังจากที่ git clone เสร็จแล้ว ให้พิมพ์คำสั่งต่อใน terminal เพื่อเข้าไปใน folder นั้น
 
 ``` cd SeeWeDev/ ```
 
@@ -78,13 +82,44 @@ I forked this repo from **https://github.com/pbunnun/SeeWeDev.git** to learn and
 
 ``` make ```
 
-เมื่อทำทุกอย่างเสร็จจะพบว่ามี folder ใหม่เพิ่มขึ้นใน folder SeeWeDev ซึ่งใน build ก็จะมีไฟล์มากมายเช่นกัน
+เมื่อทำทุกอย่างเสร็จจะพบว่ามี folder ใหม่เพิ่มขึ้นใน folder SeeWeDev ซึ่งใน build ก็จะมีไฟล์มากมายเช่นกัน 
 
-**ถ้ากดเข้าไปใน build ก็จะเจอ folder CVDev และก็จะเจอไฟล์ .EXE ชื่อ CVDev กดเข้าไปก็จะเป็นโปรแกรม CVDev ขึ้นมาให้เล่นเลย**
+ถ้ากดเข้าไปใน build ก็จะเจอ folder CVDev และก็จะเจอไฟล์ .EXE ชื่อ CVDev กดเข้าไปก็จะเป็นโปรแกรม CVDev ขึ้นมาให้เล่นเลย
+
 <br /><br />
+--------------------------------
+
+# สิ่งที่เปลี่ยนของNodeEditor
+
+เนื่องจาก https://github.com/paceholder/nodeeditor.git [branch v3] (อย่าลืมกดเข้าไปดู v3 ) ได้มีการเปลี่ยนแปลงจาก NodeEditor version 2 ค่อนข้างเยอะ เขาจึงได้ทำการสรุปมาใน Document นี้: ```https://qtnodes.readthedocs.io/en/master/```
+
+ให้ดูหน้าที่เขียนว่า ```Porting Code from Version 2.x``` โดยมีสิ่งที่เปลี่ยนดังนี้
+
+1. ชื่อและหน้าที่ของ Class ต่าง ๆ 
+
+<img width="700" height="666" alt="image" src="https://github.com/user-attachments/assets/e0c92e3b-370d-4728-a599-53495eeba6b7" />
+
+อันนี้คือรูปที่จดลองแกะดูก็ได้นะ 55555
+
+<img width="1374" height="1540" alt="image" src="https://github.com/user-attachments/assets/7d2b7abe-ac2d-4bbb-9de2-5eaf882f470b" />
+
+2. ฟีเจอร์ที่ถูกลบออก
+
+<img width="720" height="292" alt="image" src="https://github.com/user-attachments/assets/984d7cc8-3b5b-4b7f-8290-4f46bdd4fc89" />
+
+อันนี้คือรูปที่จดเหมือนกันลองแกะดูก็ได้นะ 555555
+
+<img width="1815" height="969" alt="image" src="https://github.com/user-attachments/assets/e2e6092a-524c-4afb-9f34-01ae27011dec" />
+
+<br /><br />
+-------------------------------
 
 # สิ่งที่ได้ทำลงไปบ้าง
-- [CompileCVDev](#CompileCVDev)
-- [สิ่งที่ได้ทำลงไปบ้าง](#สิ่งที่ได้ทำลงไปบ้าง)
+1. แปลง CmakeLists.txt หลักโดยการเพิ่ม path nodeeditor_v3 ของใหม่เข้ามาแทน
+
+โดยสังเกตจากลูกศรสีแดงด้านล่างจะเป็น v3 ทีี่เพิ่มเข้ามา ในขณะที่กากบาทสีแดงจะเป็น NodeEditor ตัวเก่าที่นำออกไป
+
+<img width="543" height="558" alt="image" src="https://github.com/user-attachments/assets/947289a6-d4e7-48a7-a7b3-2a53205aa483" />
+
 
 
